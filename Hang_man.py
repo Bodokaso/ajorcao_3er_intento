@@ -13,8 +13,8 @@ def play(word):
     guessed_words = []
     tries = 6
     print("Juguemos el Ajorcao")
-    print(display_game(tries))
-    print(word_completion)
+    print("Intentos: " + display_game(tries))
+    print("Palabra: " + word_completion)
     print("\n")
     while not guessed and tries > 0:
         guess = input("Por favor ingrese una letra: ").upper()
@@ -47,13 +47,13 @@ def play(word):
                 word_completion = word
         else:
             print("No es valido.")
-        print(display_game(tries))
-        print(word_completion)
+        print("Intentos: " + display_game(tries))
+        print("Palabra: " + word_completion)
         print("\n")
     if guessed:
         print("Adivinaste! felicidades!")
     else:
-        print("Agostaste todas tus opciones, la palabra era " + word +".")
+        print("Perdiste! la palabra era " + word +".")
 
 
 
